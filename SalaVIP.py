@@ -519,7 +519,7 @@ while True:
 
                     while True:    
 
-                        usernew = input("Desea entrar otro usuario? (S)/(n): ")
+                        usernew = input(WHITE+"Desea entrar otro usuario? (S)/(n): ")
                         usernew = str(usernew)
 
                         if usernew not in op:
@@ -542,7 +542,7 @@ while True:
 
                         print("")
 
-                        user = input("Ingrese su nombre: ")
+                        user = input(WHITE+"Ingrese su nombre: ")
                         user = str(user)                                                    
                             
                         if user in usuarios:
@@ -622,8 +622,8 @@ while True:
 
                                         continue
                                     else:
-
                                         system ('cls')
+                                    break
                                     
                                     if mas == 's':  
 
