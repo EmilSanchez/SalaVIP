@@ -607,13 +607,15 @@ while True:
                             print("")
 
                             while True:
+                                    
+                                mas = input("Deseas Agregar mas dinero? (S)/(n): ")
 
-                                    mas = input("Deseas Agregar mas dinero? (S)/(n): ")
+                                mas = mas.lower()
 
-                                    mas = mas.lower()
+                                system ('cls')
 
-                                    system ('cls')
-
+                                while True:
+                                        
                                     if mas not in op:
 
                                         system ('cls')
@@ -623,33 +625,34 @@ while True:
                                         continue
                                     else:
                                         system ('cls')
-                                    break
-                                    
-                                    if mas == 's':  
-
-                                        while True:
-
-                                            try: 
-
-                                                tarjetamas1 = int(input("Cuanto dinero deseas agregarle a la tarjeta?: "))  
-                                                system('cls')                                                                                                                     
-                                                break
-
-                                            except:
-
-                                                system ('cls')
-                                                print("Lo siento, debes escribir numeros enteros")
-                                                print("")
-                                        
-                                    elif mas == 'n':
-                                        system ('cls')
-
                                         break
+                                
+                                if mas == 's':  
+
+                                    while True:
+
+                                        try: 
+
+                                            tarjetamas1 = int(input("Cuanto dinero deseas agregarle a la tarjeta?: "))  
+                                            system('cls')                                                                                                                     
+                                            break
+
+                                        except:
+
+                                            system ('cls')
+                                            print("Lo siento, debes escribir numeros enteros")
+                                            print("")
+
+                                elif mas == 'n':
+                                    system ('cls')
+
+                                    break
 
 
-                                    tarjeta+=tarjetamas1
+                                tarjeta+=tarjetamas1
 
-                                    continue
+                                break
+
         
                     elif usernew == 'n':
 
@@ -710,5 +713,3 @@ while True:
         system ('cls')
 
         continue
-        
-
