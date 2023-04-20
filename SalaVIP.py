@@ -269,7 +269,7 @@ def juego2():
             tarjeta += 74                    
             print(carrito)
             print("")
-            print("Ganaste $52 por ayudar a Emil!")
+            print("Ganaste $74 por ayudar a Emil!")
             print("")
 
         break
