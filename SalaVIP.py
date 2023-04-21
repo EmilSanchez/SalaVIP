@@ -77,8 +77,8 @@ def juego1():
 
             print("")
             system ('cls')
-            print("La opcion que ingreso no es valida!, Ingrese nuevamente su opcion...")
-            print("")
+            print(RED+"OPCION NO VALIDA!")
+            print(WHITE+"")
 
             continue
 
@@ -180,7 +180,7 @@ def juego1():
 
                 print("El ganador es el Usuario! -->",user)
 
-                tarjeta = tarjeta + 124
+                tarjeta = tarjeta + 45000
 
                 break
 
@@ -266,10 +266,10 @@ def juego2():
             system ('cls')
             print("Excelente llevaremos lo siguiente!")
             print("")
-            tarjeta += 74                    
+            tarjeta += 26000                   
             print(carrito)
             print("")
-            print("Ganaste $52 por ayudar a Emil!")
+            print("Ganaste $26000 por ayudar a Emil!")
             print("")
 
         break
@@ -310,17 +310,17 @@ def juego3():
 
             print("")
 
-            print("el resulta es:"+str(result))
+            print("el resultado es:"+str(result))
 
             print("")
 
         if result<=10:
 
-            print("Felicitaciones! gano $162") 
+            print("Felicitaciones! gano $85000 Pesos") 
             print("")     
             print("Tenias",tarjeta)
 
-            tarjeta = tarjeta + 162
+            tarjeta = tarjeta + 85000
 
             print("")
             print("Ahora tienes",tarjeta)
@@ -329,11 +329,11 @@ def juego3():
 
         elif result >10 and result <=40:
 
-            print("Felicitaciones! gano $100")
+            print("Felicitaciones! gano $62000 Pesos")
             print("")
             print("Tenias",tarjeta)
 
-            tarjeta = tarjeta + 100
+            tarjeta = tarjeta + 62000
 
             print("")
             print("Ahora tienes",tarjeta)
@@ -342,11 +342,11 @@ def juego3():
 
         elif result > 40 and result <=80:
 
-            print ("Felicitaciones! gano $68")
+            print ("Felicitaciones! gano $54000 Pesos")
             print("")
             print("Tenias",tarjeta)
 
-            tarjeta = tarjeta + 68
+            tarjeta = tarjeta + 54000
 
             print("")
             print("Ahora tienes",tarjeta)
@@ -354,10 +354,10 @@ def juego3():
             break
 
         else:
-            print("el dardo callo fuera gano $36")
+            print("el dardo callo fuera gano $40000 Pesos")
             print("")
             print("Tenias",tarjeta)
-            tarjeta = tarjeta + 36
+            tarjeta = tarjeta + 40000
             print("")
             print("Ahora tienes",tarjeta)
 
@@ -375,7 +375,7 @@ while True:
 
     print(RED+"¡Debes agregarle saldo!")
     print("")
-    print(WHITE+"El juego mas enconomico es de 48, puedes agregar eso o mas!")
+    print(WHITE+"El juego mas enconomico es de 18000 Pesos, puedes agregar eso o mas!")
     print("")
 
     break 
@@ -385,16 +385,13 @@ while True:
     try :
 
         tarjeta = int(input("Cuanto deseas recargarle a la tarjeta?: "))   
-        system('cls')
-        print(MAGENTA+"BIENVENID@ A LA SALA DE VIDEOJUEGOS VIP DE ---> (Emil Sanchez)"+WHITE)
-        print("")  
-         
+        system('cls')         
         break 
 
     except:
 
         system ('cls')
-        print("Lo siento, ingrese numeros enteros....")
+        print("Lo siento, ingrese su dinero en pesos colombianos")
         print("")
 
         continue
@@ -403,7 +400,8 @@ while True:
 while True:
     
     if tarjeta > 0:
-        
+        print(MAGENTA+"BIENVENID@ A LA SALA DE VIDEOJUEGOS VIP DE ---> (Emil Sanchez)"+WHITE)
+        print("")
         print("Hola",user)
         print("")
         print("Saldo de su tarjeta -->",tarjeta,GREEN+"$")
@@ -411,40 +409,86 @@ while True:
         print("")
         print(BLUE+"------------",WHITE+"Juegos",BLUE+"--------------")
         print("")
-        print(WHITE+"1. Piedra, Papel o Tijera         ----> $82")
-        print("2. De compras con Emil            ----> $48")
-        print("3. Gana Dinero Lanzando el Dardo  ----> $94")
+        print(WHITE+"1. Piedra, Papel o Tijera         Valor ----> $25000 Pesos","Con Posibilidad de Ganar 45000")
+        print("2. De compras con Emil            Valor ----> $18000 Pesos","Con Posibilidad de Ganar 26000")
+        print("3. Gana Dinero Lanzando el Dardo  Valor ----> $45000 Pesos","Con Posibilidad de Ganar entre 45000 hasta 85000")
         print("")
         print("4. Salir")
         print("")
 
-        opcion = int(input("Ingrese el numero del juego que desea ejecutar --> "))
+        while True:
+
+            try:
+                opcion = int(input("Ingrese el numero del la opcion a ejecutar --> "))
+                break
+            except:
+                
+                system('cls')
+                print(MAGENTA+"BIENVENID@ A LA SALA DE VIDEOJUEGOS VIP DE ---> (Emil Sanchez)"+WHITE)
+                print("")
+                print("Hola",user)
+                print("")
+                print("Saldo de su tarjeta -->",tarjeta,GREEN+"$")
+                WHITE
+                print("")
+                print(BLUE+"------------",WHITE+"Juegos",BLUE+"--------------")
+                print("")
+                print(WHITE+"1. Piedra, Papel o Tijera         Valor ----> $25000 Pesos","Con Posibilidad de Ganar 45000")
+                print("2. De compras con Emil            Valor ----> $18000 Pesos","Con Posibilidad de Ganar 26000")
+                print("3. Gana Dinero Lanzando el Dardo  Valor ----> $45000 Pesos","Con Posibilidad de Ganar entre 45000 hasta 85000")
+                print("")
+                print("4. Salir")
+                print("")                
+                print(RED+"Ingrese una opcion Valida...")
+                print(WHITE+"")
+                continue
 
         opcion = str(opcion)
 
         if opcion == '1':
 
-            if tarjeta < 82:
+            if tarjeta < 25000:
 
                 system ('cls')
-                print("Dinero insuficiente...")
-                print("")
-                while True:     
-                    try :
-                        tarjeta = int(input("Cuanto deseas recargarle a la tarjeta?: "))   
-                        tarjeta += tarjetamas
-                        system ('cls')
-                            
-                    except:
-                        system ('cls')
-                        print("Ingrese un numero entero")
+                print(RED+"Dinero insuficiente...")
+                print(WHITE+"")
+                op = ('s','n')
+                while True:
+                    massaldo = input("Desea agregar mas saldo? (s)/(n): ")
+                    system('cls')
+                    if massaldo not in op:
+                        system('cls')
+                        print("Lo siento, esa opcion no existe...")
                         print("")
                         continue
+                    else:                        
+                        break
+
+                if massaldo == 's': 
+                                                                      
+                    while True:     
+                        try :
+                            tarjetamas = int(input("Cuanto deseas recargarle a la tarjeta?: "))   
+                            tarjeta += tarjetamas
+                            print("")
+                            system('cls')
+                            break
+                                
+                        except:
+                            system ('cls')
+                            print("Lo siento, ingrese su dinero en pesos colombianos")
+                            print("")
+                            continue
+                else:     
+                    print("")               
+                    continuar = input("Enter para regresar al menu: ")
+                    system ("cls")
+                continue
                 
 
             else:
 
-                tarjeta = tarjeta - 82
+                tarjeta = tarjeta - 25000
                 system ("cls")
                 print("Buena eleccion! Jugaras ( Piedra, papel o Tijeras :)! )")
                 print("")
@@ -454,53 +498,102 @@ while True:
                 print("")
                 continuar = input("Enter para regresar al menu: ")
                 system ("cls")
-
                 continue
                 
         elif opcion == '2': 
                         
-                    if tarjeta < 48:
-
-                        system ('cls')
-                        print("Dinero insuficiente...")
+            if tarjeta < 18000:                                               
+                system ('cls')
+                print(RED+"Dinero insuficiente...")
+                print(WHITE+"")
+                op = ('s','n')
+                while True:
+                    massaldo = input("Desea agregar mas saldo? (s)/(n): ")
+                    system('cls')
+                    if massaldo not in op:
+                        system('cls')
+                        print("Lo siento, esa opcion no existe...")
                         print("")
-                        tarjetamas = int(input("Cuanto deseas recargarle a la tarjeta?: "))
-                        tarjeta += tarjetamas
-                        system ('cls')
-
                         continue
+                    else:                       
+                        break
 
-                    else:
+                if massaldo == 's':                                                   
+                    while True:     
+                        try :
+                            tarjetamas = int(input("Cuanto deseas recargarle a la tarjeta?: "))   
+                            tarjeta += tarjetamas
+                            print("")
+                            system('cls')
+                            break
+                                
+                        except:
+                            system ('cls')
+                            print("Lo siento, ingrese su dinero en pesos colombianos")
+                            print("")                           
+                            continue
+                else:     
+                    print("")               
+                    continuar = input("Enter para regresar al menu: ")
+                    system ("cls")
+                continue
 
-                        tarjeta = tarjeta - 48
-                        system ("cls")                 
-                        print("Buena eleccion! Jugaras ( De compras con Emil :)! )")
-                        print("")
-                        juego2()
-                        print("")
-                        continuar = input("Enter para regresar al menu: ")
-                        system ("cls")
+            else:
 
-                        continue
+                tarjeta = tarjeta - 18000
+                system ("cls")                 
+                print("Buena eleccion! Jugaras ( De compras con Emil :)! )")
+                print("")
+                juego2()
+                print("")
+                continuar = input("Enter para regresar al menu: ")
+                system ("cls")
 
-                        
-                    
+                continue
+                                            
         elif opcion == '3':
 
-            if tarjeta < 94:
+            if tarjeta < 45000:
 
                 system ('cls')
-                print("Dinero Insuficiente...")
-                print("")
-                tarjetamas = int(input("Cuanto deseas recargarle a la tarjeta?: "))
-                tarjeta += tarjetamas
-                system ('cls')
+                print(RED+"Dinero insuficiente...")
+                print(WHITE+"")
+                op = ('s','n')
+                while True:
+                    massaldo = input("Desea agregar mas saldo? (s)/(n): ")
+                    system('cls')
+                    if massaldo not in op:
+                        system('cls')
+                        print("Lo siento, esa opcion no existe...")
+                        print("")
+                        continue
+                    else:
+                        
+                        break
+                if massaldo == 's':                                                   
+                    while True:     
+                        try :
+                            tarjetamas = int(input("Cuanto deseas recargarle a la tarjeta?: "))   
+                            tarjeta += tarjetamas
+                            print("")
+                            system('cls')
+                            break
+                                
+                        except:
+                            system ('cls')
+                            print("Lo siento, ingrese su dinero en pesos colombianos")
+                            print("")
+                            continue
+                else:     
+                    print("")               
+                    continuar = input("Enter para regresar al menu: ")
+                    system ("cls")
 
                 continue
 
             else:
 
-                tarjeta = tarjeta - 94
+                tarjeta = tarjeta - 45000
                 system ("cls")  
                 print("Buena eleccion! Jugaras (A lanzar el dardo!)")
                 print("")
@@ -542,7 +635,7 @@ while True:
 
                         print("")
 
-                        user = input("Ingrese su nombre: ")
+                        user = input(WHITE+"Ingrese su nombre: ")
                         user = str(user)                                                    
                             
                         if user in usuarios:
@@ -558,35 +651,43 @@ while True:
                             print("")
                         
 
-                            while True:
-                                    mas = input("Deseas Agregar mas dinero? (S)/(n): ")
+                            while True:                                 
+                                mas = input("Deseas Agregar mas dinero? (S)/(n): ")
 
-                                    mas = mas.lower()
+                                mas = mas.lower()
 
-                                    system ('cls')
+                                system ('cls')
 
-                                    if mas not in op:
+                                if mas not in op:
 
+                                    system('cls')
+                                    print("Lo siento, esa opcion no existe...")
+                                    print("")
+                                    continue
+
+                                else:
+
+                                    if mas == 's':      
+
+                                        while True:
+
+                                            try: 
+
+                                                tarjetamas1 = int(input("Cuanto dinero deseas agregarle a la tarjeta?: "))                                                  
+                                                system('cls')
+                                                break                                                                                                                     
+                                                
+                                            except:
+
+                                                system ('cls')
+                                                print("Lo siento, ingrese su dinero en pesos colombianos")
+                                                print("")
+                                                continue
+                                    elif mas == 'n':                                    
                                         system('cls')
-                                        print("Lo siento, esa opcion no existe...")
-                                        print("")
-                                        continue
-
-                                    else:
-
-                                        if mas == 's':      
-
-                                            tarjetamas1 = int(input("Cuanto dinero deseas agregarle a la tarjeta?: "))
-
-                                            tarjeta+=tarjetamas1
-
-                                            system ('cls')
-
-                                            break
-                                        else:
-
-                                            system('cls')
-                                            break
+                                        break
+                                tarjeta+=tarjetamas1 
+                                break    
 
                         else:
                             while True:
@@ -638,7 +739,7 @@ while True:
                                             except:
 
                                                 system ('cls')
-                                                print("Lo siento, debes escribir numeros enteros")
+                                                print("Lo siento, ingrese su dinero en pesos colombianos")
                                                 print("")
                                         
                                     elif mas == 'n':
@@ -647,9 +748,7 @@ while True:
                                         break
 
 
-                                    tarjeta+=tarjetamas1
-
-                                    continue
+                                    tarjeta+=tarjetamas1                                    
         
                     elif usernew == 'n':
 
@@ -702,10 +801,10 @@ while True:
                 break
             except:
                 system ('cls')
-                print("Lo siento, debes escribir numeros enteros")
+                print("Lo siento, ingrese su dinero en pesos colombianos")
                 print("")
                 continue
-        tarjeta += tarjetamas
+        tarjeta += tarjetamas1
 
         system ('cls')
 
